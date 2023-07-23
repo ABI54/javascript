@@ -1,0 +1,38 @@
+<script>
+function ab()
+{
+x=parseInt(document.getElementById("sel").value);
+y=parseInt(document.getElementById("a").value);
+if(x==1)
+{
+p=Math.sqrt(1/y);
+q=1-p;
+}
+else
+{
+q=Math.sqrt(1/y);
+p=1-q;
+}
+r=2*p*q;
+document.getElementById("a1").value=p;
+document.getElementById("a2").value=r;
+document.getElementById("a3").value=q;
+}
+</script>
+<body background="902.jpg">
+<form align=center><center><font color="white">
+<h1>ALLELE FREQUENCY CALCULATOR</h1>
+<table align=center width=50% height=50% bgcolor="lightblue">
+<tr><td align=center colspan=2><b><h3>A PREDICTOR.........</h3><br> To find the probability of being affected by a particular disease using Hardy Weinberg equation</b></td></tr>
+<tr><td>select the frequency you are aware of</td><td><select id=sel>
+<option value=1>healthy individual frequency
+<option value=2>affected frequency</select></td></tr><tr><td>
+enter the frequency(eg.1 in 100)</td><td>
+1 in <input type=text id=a></td></tr><tr><td align=center colspan=2>
+<input type=button value=submit onclick="ab();"></td></tr></table><br>
+<table align=center bgcolor="lightblue" width=50% height=35%><tr><td align=center colspan>
+The following results are predicted according to your data........<br> <br>
+Chances of being healthy <input type=text id=a1><br>
+Chances of being carrier <input type=text id=a2><br>
+Chances of being affected <input type=text id=a3></td></tr></table></font><center>
+</form></body>
